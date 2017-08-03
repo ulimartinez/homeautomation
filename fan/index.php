@@ -14,7 +14,7 @@ else if(isset($_GET['off'])){
 }
 else if(isset($_GET['read'])){
   $state = readStatus();
-  echo json_encode(new Array('status'=>($state == 1? "on" : "off")));
+  echo json_encode(new Array('status'=>$state));
 }
 function readStatus(){
   return intval(exec("gpio read 4"));
