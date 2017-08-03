@@ -13,7 +13,7 @@ else if(isset($_GET['off'])){
 }
 else if(isset($_GET['read'])){
   $state = readStatus();
-  echo json_encode(array('status'=>$state));
+  echo json_encode(array('status'=>($state == 1? "on" : "off")));
 }
 else{
   die("Nothing to do");
