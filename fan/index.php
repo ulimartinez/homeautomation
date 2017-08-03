@@ -1,10 +1,10 @@
 <?php
 //header('Content-Type: application/json');
-$setmode17 = shell_exec("gpio mode 4 out");
+exec("gpio mode 4 out");
 if(isset($_GET['on'])){
   if(readStatus() != 1)
     $gpio_on = exec("gpio write 4 1");
-  echo json_encode(new Array('status'=>"on"));
+  echo json_encode(array('status'=>"on"));
 
 }
 else if(isset($_GET['off'])){
@@ -14,7 +14,10 @@ else if(isset($_GET['off'])){
 }
 else if(isset($_GET['read'])){
   $state = readStatus();
-  echo json_encode(new Array('status'=>$state));
+  echo json_encode(array('status'=>$state));
+}
+else{
+  die("Nothing to do");
 }
 function readStatus(){
   return intval(exec("gpio read 4"));
