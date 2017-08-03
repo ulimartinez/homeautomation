@@ -1,6 +1,5 @@
 <?php
-//header('Content-Type: application/json');
-exec("gpio mode 4 out");
+header('Content-Type: application/json');
 if(isset($_GET['on'])){
   if(readStatus() != 1)
     $gpio_on = exec("gpio write 4 1");

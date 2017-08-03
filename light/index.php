@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: application/json');
-$setmode17 = shell_exec("gpio mode 1 out");
 if(isset($_GET['on'])){
   if(readStatus() != 1)
     $gpio_on = exec("gpio write 1 1");
@@ -15,6 +14,9 @@ else if(isset($_GET['off'])){
 else if(isset($_GET['read'])){
   $state = readStatus();
   echo json_encode(array('status'=>($state == 1? "on" : "off")));
+}
+else {
+  die("Nothing to do");
 }
 function readStatus(){
   return intval(exec("gpio read 1"));
