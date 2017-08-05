@@ -16,6 +16,7 @@ else if(isset($_GET['read'])){
   echo json_encode(array('fanstatus'=>($state == 1? "on" : "off")));
 }
 else{
+  $state = readStatus();
   echo json_encode(array('fanstatus'=>($state == 1? "on" : "off")));
 }
 function readStatus(){
