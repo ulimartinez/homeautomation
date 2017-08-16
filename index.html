@@ -107,7 +107,7 @@
     $(".switch").on('switchChange.bootstrapSwitch', function(e, s){
       var $swtch = $(this);
       var toggle = $swtch.prop("id");
-      var state = s?"on":"oftf";
+      var state = s?"on":"off";
       $.get("api/"+toggle+"?"+state, function(response){
         if(response.status != state){
           $swtch.bootstrapSwitch("toggleState", true);
