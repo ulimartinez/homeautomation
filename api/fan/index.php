@@ -12,7 +12,7 @@ else if(isset($_GET['off'])){
     $gpio_off = exec("gpio write ".FAN_GPIO." 0");
     echo json_encode(array('status'=>"off"));
 }
-else if(isset($_GET['toggle']){
+else if(isset($_GET['toggle'])){
   $state = readStatus();
   if($state)
     $state = 0;
