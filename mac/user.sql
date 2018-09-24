@@ -1,0 +1,1 @@
+user	CREATE TABLE `user` (\n  `id` int(5) NOT NULL AUTO_INCREMENT,\n  `name` varchar(50) DEFAULT NULL,\n  `mac` varchar(64) NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4

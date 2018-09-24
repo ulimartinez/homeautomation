@@ -1,0 +1,1 @@
+subscribed	CREATE TABLE `subscribed` (\n  `s_id` int(5) NOT NULL AUTO_INCREMENT,\n  `u_id` int(5) NOT NULL,\n  PRIMARY KEY (`s_id`),\n  KEY `u_id` (`u_id`),\n  CONSTRAINT `subscribed_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user` (`id`) ON DELETE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4
