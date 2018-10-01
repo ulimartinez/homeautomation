@@ -7,7 +7,7 @@
   "author": "Ulises <ulimartinez96@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.1.2",
     "bootstrap-switch": "https://github.com/Bttstrp/bootstrap-switch.git",
     "jquery": "^3.2.1",
     "popper.js": "^1.11.1"
